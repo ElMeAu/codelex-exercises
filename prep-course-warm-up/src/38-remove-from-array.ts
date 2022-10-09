@@ -1,6 +1,11 @@
 export {};
 
-const removeFromArray = function() {};
+
+const removeFromArray = function(arr:number[], ...args:number[]) {
+
+    return arr.filter((a: number ) => !args.includes(a))
+}; 
+
 
 console.log(removeFromArray([1, 2, 3, 4], 3)); // Expected output: [1, 2, 4]
 console.log(removeFromArray([1, 2, 3, 4], 7)); // Expected output: [1, 2, 3, 4]

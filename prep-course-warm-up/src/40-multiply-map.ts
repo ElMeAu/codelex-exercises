@@ -8,10 +8,16 @@ export {};
  * and recreate the logic yourself.
  */
 
-const map = () => {};
+const map = (arr:number[], callBack: Function) => {
+  for(let i=0; i<arr.length; i++) {
+    arr[i] = callBack(arr[i]);
+  }
+
+  return arr;
+};
 
 const numbers = [1, 2, 3];
-const doubled = map(numbers, function(number) {
+const doubled = map(numbers, function(number: number) {
   return number * 2;
 });
 console.log(doubled); // Expected result: [2, 4, 6]
