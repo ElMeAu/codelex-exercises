@@ -5,9 +5,20 @@ export {};
  * one of which does not use built-in Math methods.
  */
 
-const min = array => {};
+const min = function(array: Array<number>) {
+    let miniMax = array[0]
+    for(let i = 1; i < array.length; i++) {
+        if (miniMax > array[i]) { 
+            miniMax = array[i];
 
-const max = array => {};
+        }
+
+    }return miniMax
+};
+
+const max = function(array: Array<number>) {
+    return array.sort()[array.length-1];
+};
 
 console.log(min([1, 2, 3, 4, 5])); // Expected output: 1
 console.log(min([9, -3, 6])); // Expected output: -3

@@ -20,6 +20,13 @@ const books = [
   }
 ];
 
-const getTheTitles = () => {};
+const getTheTitles = (nosaukums: Array<{ title: string, author: string }>) => {
+    let data = []
+      for (let i = 0; i<nosaukums.length; i++){
+        data.push(nosaukums[i].title)
+        
+      
+      } return data
+};
 
 console.log(getTheTitles(books)); // Expected output: ['4 hour work week', 'Tools of Titans']

@@ -13,7 +13,16 @@ export {};
  */
 
 // You are allowed to change only this function
-function calculateSalesTax() {}
+function calculateSalesTax(b:number): number {
+
+    return Math.round(b*0.21 * 100) / 100;
+
+}
+//function calculateSalesTax(b:number): number
+// return price * 0.21
+ // function formatNumber(num:number):string {
+    //return num.toFixed(2)
+// }
 
 const product = "You don't know JS";
 const price = 19.99;

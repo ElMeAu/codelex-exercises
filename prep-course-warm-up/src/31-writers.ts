@@ -35,3 +35,15 @@ const writers = [
     alive: true
   }
 ];
+
+function hello(intro: Array<{firstName:string,lastName:string,occupation:string,age:number, alive:boolean}>) {
+  for (let i=0; i<intro.length; i++)
+    if(intro[i].alive === true) {
+      console.log(`Hi, my name is ${intro[i].firstName} + ${intro[i].lastName}. I am ${intro[i].age} years old, and work as a ${intro[i].occupation}.`)
+    }
+}
+
+hello(writers)
+
+  
+
